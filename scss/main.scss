@@ -1,0 +1,71 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+$indigo-500: #6366f1;
+$teal-500:   #14b8a6;
+$sky-500:    #0ea5e9;
+$emerald-500:#10b981;
+$amber-500:  #f59e0b;
+$rose-500:   #ef4444;
+$slate-900:  #0f172a;
+$slate-50:   #f8fafc;
+
+$primary:   $indigo-500;
+$secondary: $teal-500;
+$info:      $sky-500;
+$success:   $emerald-500;
+$warning:   $amber-500;
+$danger:    $rose-500;
+$light:     $slate-50;
+$dark:      $slate-900;
+
+$body-bg:    #ffffff;
+$body-color: #0b1220;
+$link-color: $primary;
+
+$btn-border-radius: .75rem;
+$card-border-radius: 1rem;
+$border-radius: .6rem;
+
+@import "../node_modules/bootstrap/scss/variables";
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary":   $primary,
+    "secondary": $secondary,
+    "success":   $success,
+    "info":      $info,
+    "warning":   $warning,
+    "danger":    $danger,
+    "light":     $light,
+    "dark":      $dark
+  )
+);
+
+$navbar-light-color: rgba($dark, .75);
+$navbar-light-hover-color: $dark;
+$navbar-light-active-color: $primary;
+$input-focus-border-color: tint-color($primary, 30%);
+$input-btn-focus-color: rgba($primary, .25);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.navbar .btn.btn-secondary { color: #fff; }
+
+#pricing .card.border-primary {
+  box-shadow: 0 8px 24px rgba(99,102,241,.15);
+}
+
+.list-group-item i.bi-star-fill { color: $amber-500; }
+.list-group-item i.bi-star-half { color: mix($amber-500, #fff, 70%); }
+
+.tooltip-inner { font-size: .875rem; }
+
+#intro img.img-fluid {
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.15));
+}
+
+
+
+
+
